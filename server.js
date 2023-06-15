@@ -13,10 +13,10 @@ const port = process.env.PORT || 3005;
 
 app.use(cors())
 
-app.post('/', (req, res) => {
+app.post('http://localhost:3000/', (req, res) => {
  
 
-    console.log("req todo is" , req);
+    console.log("req todo is" , req.body);
 
     const url = "https://api.openai.com/v1/chat/completions";
   
@@ -34,7 +34,7 @@ app.post('/', (req, res) => {
           messages: [
             {
               role: "user",
-              content: `Write a usefull article regarding : ${req.todo}`,
+              content: `Write a usefull article regarding : ${req.body}`,
             },
           ],
         }),
