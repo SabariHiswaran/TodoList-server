@@ -16,7 +16,7 @@ app.use(cors())
 app.post('/', (req, res) => {
  
 
-    console.log(req);
+    console.log("req todo is" , req.todo);
 
     const url = "https://api.openai.com/v1/chat/completions";
   
@@ -40,6 +40,7 @@ app.post('/', (req, res) => {
         }),
       })
       .then(response => {
+     console.log("Response is",response)
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
