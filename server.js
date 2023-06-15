@@ -20,7 +20,7 @@ app.use(express.json());
 app.post('/', (req, res) => {
  
 
-    console.log("req todo value is" , req.body);
+    console.log("req todo value is" , req.body.user);
 
     const url = "https://api.openai.com/v1/chat/completions";
   
