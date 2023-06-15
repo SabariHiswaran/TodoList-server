@@ -13,7 +13,7 @@ const port = process.env.PORT || 3005;
 
 app.use(cors())
 
-app.post('https://sabari-todolist.netlify.app', (req, res) => {
+app.post('/', (req, res) => {
  
 
     console.log(req);
