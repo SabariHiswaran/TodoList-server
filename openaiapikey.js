@@ -1,3 +1,3 @@
-const api_Key = "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"
+const api_Key = "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"
 
 module.exports = {api_Key}
