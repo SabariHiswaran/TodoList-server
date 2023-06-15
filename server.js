@@ -5,11 +5,11 @@ const cors = require('cors')
 
 const fetch = require('cross-fetch')
 
-const apiKey = require('./openaiapikey')
-
 const app = express()
 
 const port = process.env.PORT || 3005;
+
+const apikey = process.env.APIKEY
 
 app.use(cors())
 
@@ -29,7 +29,7 @@ app.post('/', (req, res) => {
         headers: {
          
           "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey.api_Key}`,
+          Authorization: `Bearer ${apikey}`,
           "Access-Control-Allow-Origin": "*",
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
         },
