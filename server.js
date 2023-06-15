@@ -16,7 +16,7 @@ app.use(cors())
 app.post('/', (req, res) => {
  
 
-    console.log("req todo is" , req.body);
+    console.log("req todo value is" , req.body);
 
     const url = "https://api.openai.com/v1/chat/completions";
   
