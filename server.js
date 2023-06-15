@@ -13,7 +13,7 @@ const port = process.env.PORT || 3005;
 
 app.use(cors())
 
-app.post('http://localhost:3000/', (req, res) => {
+app.post('/', (req, res) => {
  
 
     console.log("req todo is" , req.body);
