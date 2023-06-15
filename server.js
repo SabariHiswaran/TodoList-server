@@ -38,7 +38,7 @@ app.post('/', (req, res) => {
           messages: [
             {
               role: "user",
-              content: `Write a usefull article regarding : ${req.body}`,
+              content: `Write a usefull article regarding : ${req.body.user}`,
             },
           ],
         }),
